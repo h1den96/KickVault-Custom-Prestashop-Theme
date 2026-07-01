@@ -1,0 +1,897 @@
+/* ==========================================================================
+   NEXORA CUSTOM.CSS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. GLOBAL / RESET
+   ========================================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip !important;
+  background: #f5f6f8;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333333;
+}
+
+a {
+  color: #24b9d7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #24b9d7;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container,
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+
+@supports not (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+/* ==========================================================================
+   2. PAGE STRUCTURE
+   ========================================================================== */
+
+body > main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #f5f6f8;
+}
+
+body > main > #wrapper {
+  flex: 1 0 auto;
+}
+
+body > main > #footer {
+  flex: 0 0 auto;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  background: #f5f6f8;
+}
+
+#left-column,
+#right-column {
+  display: none;
+}
+
+#content-wrapper {
+  min-height: 200px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   3. HEADER
+   ========================================================================== */
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  background: #1a1a1a !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow-x: hidden !important;
+}
+
+#header .header-nav,
+#header .header-top,
+#header .header-container,
+#header .container {
+  background: #1a1a1a !important;
+}
+
+#header .header-nav {
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+#header .header-top {
+  padding: 14px 0 !important;
+}
+
+#header .nav-row,
+#header .header-row,
+#header .header-top .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+#header .logo,
+#header #shop-logo {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#header .logo img,
+#header #shop-logo img {
+  display: block;
+  width: auto !important;
+  max-height: 48px !important;
+}
+
+#header a {
+  color: #ffffff !important;
+}
+
+/* Hide unwanted parent-theme header elements */
+#header #contact-link,
+#header .contact-link,
+#header #_desktop_user_info,
+#header .user-info,
+#header .account,
+#header .user-info a,
+#header a.account,
+#header #_desktop_cart,
+#header .blockcart,
+#header .cart-preview,
+#header .shopping-cart {
+  display: none !important;
+}
+
+/* Optional custom menu support */
+#main-menu-wrapper ul,
+#main-menu-wrapper .top-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-menu-wrapper li a {
+  display: inline-block;
+  padding: 8px 0;
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+#main-menu-wrapper li a:hover {
+  color: #24b9d7 !important;
+  border-bottom-color: #24b9d7;
+}
+
+#header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#header-actions > div,
+#header-actions .search-widget {
+  display: flex;
+  align-items: center;
+}
+
+#header-actions input[type="text"] {
+  padding: 8px 15px;
+  font-size: 13px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+#header-actions input[type="text"]:focus {
+  border-color: #24b9d7;
+}
+
+#header .sub-menu,
+#header .popover,
+#main-menu-wrapper li ul {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   4. HOMEPAGE WRAPPER CLEANUP
+   ========================================================================== */
+
+#index #wrapper,
+body#index #wrapper,
+body.page-index #wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#index #content-wrapper,
+body#index #content-wrapper,
+body.page-index #content-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#index #content,
+#index .page-home,
+#index .custom-text,
+#index .block_custom_text,
+#index .ps_customtext,
+body#index #content,
+body#index .page-home,
+body#index .custom-text,
+body#index .block_custom_text,
+body#index .ps_customtext,
+body.page-index #content,
+body.page-index .page-home,
+body.page-index .custom-text,
+body.page-index .block_custom_text,
+body.page-index .ps_customtext {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* ==========================================================================
+   5. HOME HERO BANNER
+   ========================================================================== */
+
+.hero-banner,
+.hero-banner * {
+  box-sizing: border-box !important;
+}
+
+.hero-banner {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: 520px !important;
+  min-height: 520px !important;
+
+  color: #ffffff !important;
+  overflow: hidden !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.72) 42%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    url("../img/hero-bg.png") center center / cover no-repeat !important;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #24b9d7;
+}
+
+.hero-banner__inner {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: 100% !important;
+  max-width: 1200px !important;
+
+  margin: 0 auto !important;
+  padding: 60px 15px !important;
+
+  box-sizing: border-box !important;
+}
+
+.hero-banner__content {
+  width: 100% !important;
+  max-width: 580px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.hero-banner__tagline {
+  display: inline-block !important;
+  margin: 0 0 24px !important;
+
+  color: #24b9d7 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px !important;
+  text-transform: uppercase !important;
+}
+
+.hero-banner__title {
+  display: block !important;
+  margin: 0 0 26px !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+  font-size: clamp(56px, 7vw, 112px) !important;
+  line-height: 0.9 !important;
+  font-weight: 900 !important;
+  letter-spacing: -2px !important;
+  text-transform: uppercase !important;
+}
+
+.hero-banner__title span {
+  display: block !important;
+  color: #24b9d7 !important;
+}
+
+.hero-banner__description {
+  display: block !important;
+  max-width: 460px !important;
+  margin: 0 0 34px !important;
+  padding: 0 !important;
+
+  color: #f1f1f1 !important;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+}
+
+.hero-banner__button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+
+  margin: 0 !important;
+  padding: 16px 28px !important;
+
+  background: #24b9d7 !important;
+  border: 2px solid #24b9d7 !important;
+
+  color: #000000 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.hero-banner__button:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.hero-banner__button span {
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-banner {
+    height: 500px !important;
+    min-height: 500px !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.72) 100%
+      ),
+      url("../img/hero-bg.png") center center / cover no-repeat !important;
+  }
+
+  .hero-banner__inner {
+    padding: 50px 20px !important;
+  }
+
+  .hero-banner__title {
+    font-size: 54px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero-banner__description {
+    font-size: 17px !important;
+  }
+
+  .hero-banner__button {
+    width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   6. HOMEPAGE CONTENT AFTER HERO
+   ========================================================================== */
+
+#index .featured-products,
+#index .products-section,
+#index #content > section:not(.hero-banner),
+#index .page-home > section:not(.hero-banner),
+body#index .featured-products,
+body#index .products-section,
+body#index #content > section:not(.hero-banner),
+body#index .page-home > section:not(.hero-banner),
+body.page-index .featured-products,
+body.page-index .products-section,
+body.page-index #content > section:not(.hero-banner),
+body.page-index .page-home > section:not(.hero-banner) {
+  max-width: 1200px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+
+#footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+#footer .footer-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #1a1a1a !important;
+  box-sizing: border-box !important;
+}
+
+#footer .footer-before {
+  display: none !important;
+}
+
+#footer .footer-main {
+  width: 100% !important;
+  padding: 60px 20px 35px !important;
+  background: #1a1a1a !important;
+  box-sizing: border-box !important;
+}
+
+#footer .footer-main .footer-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 90px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  float: none !important;
+  clear: both !important;
+  box-sizing: border-box !important;
+}
+
+#footer .footer-main .footer-row > .footer-block,
+#footer .footer-main .footer-row > .ps-linklist,
+#footer .footer-main .footer-row > .ps-customeraccountlinks,
+#footer .footer-main .footer-row > .ps-contactinfo,
+#footer .footer-main .footer-row > .col-md-6,
+#footer .footer-main .footer-row > .col-lg-3 {
+  display: block !important;
+  float: none !important;
+  clear: none !important;
+  width: 220px !important;
+  max-width: 220px !important;
+  min-width: 180px !important;
+  flex: 0 0 220px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+#footer .footer-block__title,
+#footer #footer_title_2,
+#footer #footer_customeraccount_title,
+#footer #footer_contactinfo_title {
+  display: block !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+}
+
+#footer .footer-block__title a,
+#footer #footer_customeraccount_title a {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+#footer .footer-block__content,
+#footer .footer-block__content.collapse {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+#footer .footer-block__title button,
+#footer .stretched-link,
+#footer .material-icons,
+#footer .visually-hidden {
+  display: none !important;
+}
+
+#footer .footer-block__list {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+#footer .footer-block__list li {
+  display: block !important;
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+}
+
+#footer span[id^="desc-link"] {
+  display: none !important;
+}
+
+#footer a,
+#footer p,
+#footer li,
+#footer address,
+#footer .ps-contactinfo__infos,
+#footer .ps-contactinfo__email {
+  color: #cfcfcf !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+}
+
+#footer a:hover {
+  color: #24b9d7 !important;
+}
+
+#footer .ps-contactinfo__infos {
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+  font-style: normal !important;
+}
+
+#footer .ps-contactinfo__email {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#footer .footer-after {
+  width: 100% !important;
+  padding: 0 20px 35px !important;
+  background: #1a1a1a !important;
+  box-sizing: border-box !important;
+}
+
+#footer .footer-after .footer-row,
+#footer .footer-bottom-bar {
+  display: block !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 18px 0 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+#footer .copyright {
+  margin: 0 !important;
+  color: #cfcfcf !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+}
+
+#footer .footer-payment-icons {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   8. RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  #header .header-row,
+  #header .header-top .container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #main-menu-wrapper ul,
+  #main-menu-wrapper .top-menu {
+    gap: 18px;
+  }
+
+  #header-actions {
+    gap: 12px;
+  }
+
+  .hero-banner {
+    height: 500px !important;
+  }
+
+  .hero-banner__inner {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  #footer .footer-main .footer-row {
+    gap: 45px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #header {
+    position: relative;
+  }
+
+  #header .nav-row,
+  #header .header-row,
+  #header .header-top .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px;
+    text-align: center;
+  }
+
+  #main-menu-wrapper ul,
+  #main-menu-wrapper .top-menu {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  #content-wrapper {
+    padding: 25px 20px;
+  }
+
+  .hero-banner {
+    height: 500px !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.72) 100%
+      ),
+      url("../img/hero-bg.png") center center / cover no-repeat !important;
+  }
+
+  .hero-banner__inner {
+    padding: 50px 20px !important;
+  }
+
+  .hero-banner__title {
+    font-size: 54px;
+    letter-spacing: -1px;
+  }
+
+  .hero-banner__description {
+    font-size: 17px;
+  }
+
+  .hero-banner__button {
+    width: 100%;
+  }
+
+  #footer .footer-main {
+    padding: 40px 20px 25px !important;
+  }
+
+  #footer .footer-main .footer-row {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 28px !important;
+  }
+
+  #footer .footer-main .footer-row > .footer-block,
+  #footer .footer-main .footer-row > .ps-linklist,
+  #footer .footer-main .footer-row > .ps-customeraccountlinks,
+  #footer .footer-main .footer-row > .ps-contactinfo,
+  #footer .footer-main .footer-row > .col-md-6,
+  #footer .footer-main .footer-row > .col-lg-3 {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+
+/* ==========================================================================
+   FORCE HOMEPAGE HERO FULL WIDTH
+   ========================================================================== */
+
+/* Remove boxed container only on homepage */
+#index #wrapper,
+#index #content-wrapper,
+#index #content,
+#index .page-home,
+#index .custom-text,
+#index .block_custom_text,
+#index .ps_customtext,
+body#index #wrapper,
+body#index #content-wrapper,
+body#index #content,
+body#index .page-home,
+body#index .custom-text,
+body#index .block_custom_text,
+body#index .ps_customtext {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* If the hero is inside a PrestaShop module container, break that container */
+#index .custom-text:has(.hero-banner),
+#index .block_custom_text:has(.hero-banner),
+#index .ps_customtext:has(.hero-banner),
+#index .container:has(.hero-banner),
+#index .module-products:has(.hero-banner),
+body#index .custom-text:has(.hero-banner),
+body#index .block_custom_text:has(.hero-banner),
+body#index .ps_customtext:has(.hero-banner),
+body#index .container:has(.hero-banner),
+body#index .module-products:has(.hero-banner) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* True viewport-width hero without horizontal scroll */
+.hero-banner {
+  position: relative !important;
+
+  width: 100vw !important;
+  max-width: 100vw !important;
+
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: 520px !important;
+  min-height: 520px !important;
+
+  overflow: hidden !important;
+  color: #ffffff !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.72) 42%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    url("../img/hero-bg.png") center center / cover no-repeat !important;
+}
+
+/* Keep hero content centered inside the full-width banner */
+.hero-banner__inner {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: 100% !important;
+  max-width: 1200px !important;
+
+  margin: 0 auto !important;
+  padding: 60px 15px !important;
+
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
