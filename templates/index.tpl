@@ -95,12 +95,7 @@
 
             <div class="kv-reassurance__item">
               <div class="kv-reassurance__icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 21L32 10L52 21V43L32 54L12 43V21Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                  <path d="M12 21L32 32L52 21" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                  <path d="M32 32V54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                  <path d="M22 16L42 27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                </svg>
+                 <img src="{$urls.theme_assets}img/shipping.svg" alt="shipping">
               </div>
               <div class="kv-reassurance__content">
                 <h3>FAST SHIPPING</h3>
@@ -109,7 +104,7 @@
             </div>
 
             <div class="kv-reassurance__item">
-              <div class="kv-reassurance__icon" aria-hidden="true">
+              <div class="kv-reassurance__icon kv-reassurance__icon--crown" aria-hidden="true">
                  <img src="{$urls.theme_assets}img/limited.svg" alt="limited">
               </div>
               <div class="kv-reassurance__content">
@@ -120,10 +115,7 @@
 
             <div class="kv-reassurance__item">
               <div class="kv-reassurance__icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M32 8L52 16V30C52 43 43 53 32 57C21 53 12 43 12 30V16L32 8Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                  <path d="M23 32L29 38L42 25" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                  <img src="{$urls.theme_assets}img/returns.svg" alt="returns">
               </div>
               <div class="kv-reassurance__content">
                 <h3>EASY RETURNS</h3>

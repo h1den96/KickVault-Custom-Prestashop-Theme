@@ -1,13 +1,18 @@
 /* ======================================================================
-   KICKVAULT CUSTOM.CSS - FINAL CLEAN VERSION
-   No duplicate Featured Drops overrides
+   KICKVAULT CUSTOM.CSS - CLEAN VERSION
+   Cleaned duplicate header/reassurance/font overrides
    ====================================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 :root {
+  --kv-font-display: "Teko", "Arial Narrow", Impact, sans-serif;
+  --kv-font-body: "Inter", Arial, Helvetica, sans-serif;
   --kv-cyan: #16c8f3;
   --kv-cyan-old: #24b9d7;
   --kv-black: #000000;
   --kv-dark: #1a1a1a;
+  --kv-header-bg: #050505;
   --kv-body-bg: #ffffff;
   --kv-border: #d8d8d8;
   --kv-card-border: #cfcfcf;
@@ -16,7 +21,6 @@
   --kv-wide-container: 1440px;
   --kv-home-width: 90vw;
 }
-
 /* ======================================================================
    1. GLOBAL / RESET
    ====================================================================== */
@@ -152,134 +156,11 @@ body.page-index .ps_customtext {
   box-shadow: none !important;
 }
 
+
 /* ======================================================================
    3. HEADER
+   Final custom header rules are intentionally placed at the end of this file.
    ====================================================================== */
-
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
-  background: var(--kv-dark) !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-#header .header-nav,
-#header .header-top,
-#header .header-container,
-#header .container {
-  background: var(--kv-dark) !important;
-}
-
-#header .header-nav {
-  padding: 8px 0;
-  color: #ffffff;
-  font-size: 13px;
-}
-
-#header .header-top {
-  padding: 14px 0 !important;
-}
-
-#header .nav-row,
-#header .header-row,
-#header .header-top .container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-}
-
-#header .logo,
-#header #shop-logo {
-  display: flex !important;
-  align-items: center !important;
-}
-
-#header .logo img,
-#header #shop-logo img {
-  display: block;
-  width: auto !important;
-  max-height: 48px !important;
-}
-
-#header a {
-  color: #ffffff !important;
-}
-
-#header #contact-link,
-#header .contact-link,
-#header #_desktop_user_info,
-#header .user-info,
-#header .account,
-#header .user-info a,
-#header a.account,
-#header #_desktop_cart,
-#header .blockcart,
-#header .cart-preview,
-#header .shopping-cart {
-  display: none !important;
-}
-
-#main-menu-wrapper ul,
-#main-menu-wrapper .top-menu {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#main-menu-wrapper li a {
-  display: inline-block;
-  padding: 8px 0;
-  color: #ffffff !important;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  border-bottom: 2px solid transparent;
-}
-
-#main-menu-wrapper li a:hover {
-  color: var(--kv-cyan-old) !important;
-  border-bottom-color: var(--kv-cyan-old);
-}
-
-#header-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-#header-actions > div,
-#header-actions .search-widget {
-  display: flex;
-  align-items: center;
-}
-
-#header-actions input[type="text"] {
-  padding: 8px 15px;
-  font-size: 13px;
-  border: 1px solid #dddddd;
-  border-radius: 20px;
-  outline: none;
-}
-
-#header-actions input[type="text"]:focus {
-  border-color: var(--kv-cyan-old);
-}
-
-#header .sub-menu,
-#header .popover,
-#main-menu-wrapper li ul {
-  display: none !important;
-}
 
 /* ======================================================================
    4. HOME HERO BANNER
@@ -1408,7 +1289,910 @@ section.ps_bestsellers:empty {
   }
 }
 
-/* custom.css | http://new-prestashop1.test/themes/KickVault-Custom-Prestashop-Theme/assets/css/custom.css */
-#content-wrapper {
+
+/* =========================================================
+   KICKVAULT - TYPOGRAPHY FINAL
+   ========================================================= */
+
+body {
+  font-family: var(--kv-font-body) !important;
+}
+
+.hero-banner__title,
+.kv-category-card__content h2,
+.products-section-title {
+  font-family: var(--kv-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 0.9 !important;
+  text-transform: uppercase !important;
+}
+
+.hero-banner__title {
+  letter-spacing: 1px !important;
+}
+
+.kv-category-card__content h2 {
+  font-size: clamp(44px, 4vw, 64px) !important;
+  letter-spacing: 0.4px !important;
+}
+
+.products-section-title {
+  font-size: 42px !important;
+  letter-spacing: 0.3px !important;
+}
+
+.kv-category-card__button,
+.hero-banner__button,
+.kv-featured-drops__view-all,
+.kv-product-card__flag,
+.kv-reassurance__content h3,
+.kv-header__nav .top-menu > li > a,
+.kv-header__nav .top-menu > li > .dropdown-item,
+.kv-header__action-icon {
+  font-family: var(--kv-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+.kv-product-card__title,
+.kv-product-card__price,
+.kv-product-card__current-price {
+  font-family: var(--kv-font-body) !important;
+  font-weight: 900 !important;
+}
+
+.hero-banner__description,
+.kv-category-card__content p,
+.kv-reassurance__content p,
+#footer a,
+#footer p,
+#footer li {
+  font-family: var(--kv-font-body) !important;
+}
+
+/* =========================================================
+   KICKVAULT - REASSURANCE FINAL SIZE + CROWN FIX
+   ========================================================= */
+
+@media (min-width: 992px) {
+  .kv-reassurance {
+    padding: 34px 38px !important;
+    min-height: 96px !important;
+    align-items: center !important;
+    overflow: visible !important;
+  }
+
+  .kv-reassurance__item {
+    gap: 18px !important;
+    align-items: center !important;
+  }
+
+  .kv-reassurance__icon {
+    flex: 0 0 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+    max-width: 56px !important;
+    max-height: 56px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  .kv-reassurance__icon img,
+  .kv-reassurance__icon svg {
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    object-fit: contain !important;
+  }
+
+  .kv-reassurance__icon--crown {
+    flex-basis: 60px !important;
+    width: 60px !important;
+    height: 56px !important;
+    max-width: 60px !important;
+    max-height: 56px !important;
+    overflow: visible !important;
+  }
+
+  .kv-reassurance__icon--crown img,
+  .kv-reassurance__icon--crown svg {
+    width: 52px !important;
+    height: 52px !important;
+    max-width: 52px !important;
+    max-height: 52px !important;
+    object-fit: contain !important;
+    transform: translateY(1px) !important;
+    filter: brightness(0) !important;
+  }
+
+  .kv-reassurance__content h3 {
+    font-size: 14px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .kv-reassurance__content p {
+    font-size: 12.5px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* =========================================================
+   KICKVAULT - HEADER LEAN V2
+   Works with current header.tpl:
+   - displayTop contains ONLY ps_mainmenu
+   - right icons are custom .kv-header__action links
+   Must be LAST
+   ========================================================= */
+
+#header {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #050505 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+  overflow: visible !important;
+}
+
+.kv-header {
+  width: 100% !important;
+  height: 92px !important;
+  min-height: 92px !important;
+  background: #050505 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.kv-header__inner {
+  width: 100% !important;
+  height: 92px !important;
+  margin: 0 auto !important;
+  padding: 0 42px !important;
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) 150px !important;
+  align-items: center !important;
+  gap: 32px !important;
+  box-sizing: border-box !important;
+}
+
+/* Logo */
+.kv-header__brand-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-width: 0 !important;
+}
+
+.kv-header__brand {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  overflow: visible !important;
+}
+
+.kv-header__brand img {
+  display: block !important;
+  width: auto !important;
+  max-width: 185px !important;
+  height: auto !important;
+  max-height: 48px !important;
+  object-fit: contain !important;
+}
+
+.kv-header__brand-name {
+  display: block !important;
+  color: #ffffff !important;
+  font-family: var(--kv-font-display) !important;
+  font-size: 38px !important;
+  line-height: 0.9 !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+.kv-header__tagline {
+  display: block !important;
+  color: var(--kv-cyan) !important;
+  font-family: var(--kv-font-display) !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 2.8px !important;
+  text-transform: uppercase !important;
+}
+
+/* Center navigation */
+.kv-header__nav {
+  height: 92px !important;
+  min-width: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+/* Kill Prestashop mobile/collapse controls in desktop header */
+.kv-header__nav .navbar-toggler,
+.kv-header__nav .collapse-icons,
+.kv-header__nav .material-icons,
+.kv-header__nav .float-xs-right,
+.kv-header__nav .pull-xs-right,
+.kv-header__nav .hidden-md-up,
+.kv-header__nav .menu-mobile,
+.kv-header__nav button,
+.kv-header__nav i {
   display: none !important;
+}
+
+/* Hide mobile/secondary menu output if ps_mainmenu prints it */
+.kv-header__nav #_mobile_top_menu,
+.kv-header__nav .mobile-top-menu,
+.kv-header__nav .js-top-menu-bottom,
+.kv-header__nav .menu.js-top-menu-bottom,
+.kv-header__nav .hidden-sm-up {
+  display: none !important;
+}
+
+/* Main ps_mainmenu wrapper */
+.kv-header__nav #_desktop_top_menu,
+.kv-header__nav > .menu,
+.kv-header__nav > div:not(.sub-menu):not(.popover) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: 92px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Case A: categories are direct top-level menu items */
+.kv-header__nav .top-menu[data-depth="0"] {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 36px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  list-style: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li > a,
+.kv-header__nav .top-menu[data-depth="0"] > li > .dropdown-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--kv-font-display) !important;
+  font-size: 17px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.45px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li > a:hover,
+.kv-header__nav .top-menu[data-depth="0"] > li > .dropdown-item:hover,
+.kv-header__nav .top-menu[data-depth="0"] > li.current > a,
+.kv-header__nav .top-menu[data-depth="0"] > li.current > .dropdown-item {
+  color: var(--kv-cyan) !important;
+}
+
+/* Case B: BO menu has one parent item, e.g. "All", and the real categories are children.
+   This flattens that first child level into the visible header nav. */
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > a,
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > .dropdown-item {
+  display: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child {
+  position: static !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > .sub-menu,
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > .popover {
+  position: static !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > .sub-menu > .top-menu[data-depth="1"],
+.kv-header__nav .top-menu[data-depth="0"] > li:only-child > .popover > .top-menu[data-depth="1"],
+.kv-header__nav .top-menu[data-depth="1"] {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 36px !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  list-style: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="1"] > li {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none !important;
+}
+
+.kv-header__nav .top-menu[data-depth="1"] > li > a,
+.kv-header__nav .top-menu[data-depth="1"] > li > .dropdown-item,
+.kv-header__nav .top-menu[data-depth="1"] > li > .dropdown-submenu {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--kv-font-display) !important;
+  font-size: 17px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.45px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.kv-header__nav .top-menu[data-depth="1"] > li > a:hover,
+.kv-header__nav .top-menu[data-depth="1"] > li > .dropdown-item:hover,
+.kv-header__nav .top-menu[data-depth="1"] > li > .dropdown-submenu:hover {
+  color: var(--kv-cyan) !important;
+}
+
+/* Prevent deeper submenus from opening as duplicate columns in the header */
+.kv-header__nav .top-menu[data-depth="1"] .sub-menu,
+.kv-header__nav .top-menu[data-depth="1"] .popover,
+.kv-header__nav .top-menu[data-depth="2"],
+.kv-header__nav .category-sub-menu {
+  display: none !important;
+}
+
+/* Default dropdowns only for true multi-item top-level menus */
+.kv-header__nav .top-menu[data-depth="0"] > li:not(:only-child) > .sub-menu,
+.kv-header__nav .top-menu[data-depth="0"] > li:not(:only-child) > .popover {
+  display: none !important;
+  position: absolute !important;
+  top: calc(100% + 26px) !important;
+  left: 50% !important;
+  z-index: 1000 !important;
+  min-width: 220px !important;
+  padding: 18px 20px !important;
+  background: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35) !important;
+  transform: translateX(-50%) !important;
+}
+
+.kv-header__nav .top-menu[data-depth="0"] > li:not(:only-child):hover > .sub-menu,
+.kv-header__nav .top-menu[data-depth="0"] > li:not(:only-child):hover > .popover {
+  display: block !important;
+}
+
+/* Right actions */
+.kv-header__actions {
+  height: 92px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 24px !important;
+}
+
+.kv-header__action {
+  position: relative !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+.kv-header__action-icon {
+  display: block !important;
+  color: currentColor !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+}
+
+.kv-header__action:hover {
+  color: var(--kv-cyan) !important;
+}
+
+.kv-header__cart-count {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--kv-cyan) !important;
+  color: #000000 !important;
+  border-radius: 999px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 991px) {
+  .kv-header {
+    height: auto !important;
+  }
+
+  .kv-header__inner {
+    height: auto !important;
+    padding: 22px 24px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .kv-header__brand-wrap,
+  .kv-header__actions {
+    justify-content: center !important;
+  }
+
+  .kv-header__brand {
+    align-items: center !important;
+  }
+
+  .kv-header__nav {
+    height: auto !important;
+  }
+
+  .kv-header__nav .top-menu[data-depth="0"],
+  .kv-header__nav .top-menu[data-depth="1"] {
+    flex-wrap: wrap !important;
+    gap: 18px 26px !important;
+  }
+}
+
+
+/* =========================================================
+   KICKVAULT - HEADER FINAL FOR PS_MAINMENU STRUCTURE
+   Must be LAST
+   ========================================================= */
+
+#header {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #050505 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.kv-header {
+  width: 100% !important;
+  height: 92px !important;
+  min-height: 92px !important;
+  background: #050505 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-sizing: border-box !important;
+}
+
+.kv-header__inner {
+  width: 100% !important;
+  height: 92px !important;
+  min-height: 92px !important;
+  margin: 0 auto !important;
+  padding: 0 42px !important;
+  display: grid !important;
+  grid-template-columns: 230px minmax(0, 1fr) 150px !important;
+  align-items: center !important;
+  gap: 32px !important;
+  box-sizing: border-box !important;
+}
+
+/* Logo */
+.kv-header__brand-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-width: 0 !important;
+}
+
+.kv-header__brand {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.kv-header__brand img {
+  display: block !important;
+  width: auto !important;
+  max-width: 185px !important;
+  height: auto !important;
+  max-height: 48px !important;
+  object-fit: contain !important;
+}
+
+.kv-header__tagline {
+  display: block !important;
+  color: #16c8f3 !important;
+  font-family: "Teko", "Barlow Condensed", "Arial Narrow", Impact, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 2.7px !important;
+  text-transform: uppercase !important;
+}
+
+/* Center nav wrapper */
+.kv-header__nav {
+  height: 92px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+/* Reset ps_mainmenu desktop container */
+.kv-header__nav .ps-mainmenu,
+.kv-header__nav .ps-mainmenu--desktop,
+.kv-header__nav .ps-mainmenu__desktop {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: none !important;
+  height: 92px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  position: static !important;
+}
+
+/* Hide mobile/offcanvas output completely on desktop */
+.kv-header__nav .ps-mainmenu__mobile-toggle,
+.kv-header__nav .ps-mainmenu--mobile,
+.kv-header__nav #mobileMenu,
+.kv-header__nav .offcanvas,
+.kv-header__nav .menu--mobile,
+.kv-header__nav #menu-mobile,
+.kv-header__nav .ps-mainmenu__additionnals {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Desktop menu list */
+.kv-header__nav .ps-mainmenu__tree {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 36px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Desktop menu item */
+.kv-header__nav .ps-mainmenu__tree-item {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.kv-header__nav .ps-mainmenu__tree-item-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Desktop menu links */
+.kv-header__nav .ps-mainmenu__tree-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: "Teko", "Barlow Condensed", "Arial Narrow", Impact, sans-serif !important;
+  font-size: 19px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.45px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: color 0.2s ease !important;
+}
+
+.kv-header__nav .ps-mainmenu__tree-link:hover,
+.kv-header__nav .ps-mainmenu__tree-item.current .ps-mainmenu__tree-link {
+  color: #16c8f3 !important;
+}
+
+/* Hide any leftover icons/toggles from menu */
+.kv-header__nav .material-icons,
+.kv-header__nav button,
+.kv-header__nav .btn,
+.kv-header__nav .menu-toggle,
+.kv-header__nav .btn-close,
+.kv-header__nav .ps-mainmenu__back-button {
+  display: none !important;
+}
+
+/* Right actions */
+.kv-header__actions {
+  height: 92px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 24px !important;
+}
+
+.kv-header__action {
+  position: relative !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+.kv-header__action-icon {
+  display: block !important;
+  color: currentColor !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+}
+
+.kv-header__action:hover {
+  color: #16c8f3 !important;
+}
+
+.kv-header__cart-count {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #16c8f3 !important;
+  color: #000000 !important;
+  border-radius: 999px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .kv-header {
+    height: auto !important;
+  }
+
+  .kv-header__inner {
+    height: auto !important;
+    min-height: 92px !important;
+    padding: 22px 24px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .kv-header__brand-wrap,
+  .kv-header__nav,
+  .kv-header__actions {
+    justify-content: center !important;
+  }
+
+  .kv-header__brand {
+    align-items: center !important;
+  }
+
+  .kv-header__nav,
+  .kv-header__nav .ps-mainmenu,
+  .kv-header__nav .ps-mainmenu--desktop,
+  .kv-header__nav .ps-mainmenu__desktop {
+    height: auto !important;
+  }
+
+  .kv-header__nav .ps-mainmenu__tree {
+    flex-wrap: wrap !important;
+    gap: 16px 24px !important;
+  }
+
+  .kv-header__actions {
+    height: auto !important;
+  }
+}
+
+/* =========================================================
+   KICKVAULT - LOGO WIDTH ALIGNMENT
+   ========================================================= */
+
+.kv-header__brand {
+  align-items: center !important;
+  width: 190px !important;
+}
+
+.kv-header__brand img {
+  width: 190px !important;
+  max-width: 190px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+.kv-header__tagline {
+  width: 190px !important;
+  text-align: center !important;
+  letter-spacing: 2.9px !important;
+}
+
+
+/* =========================================================
+   KICKVAULT - HEADER ACTION ICONS
+   Must be LAST
+   ========================================================= */
+
+.kv-header__actions {
+  gap: 28px !important;
+}
+
+.kv-header__action {
+  position: relative !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+.kv-header__action-svg {
+  display: block !important;
+  width: 25px !important;
+  height: 25px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2.1 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  overflow: visible !important;
+}
+
+.kv-header__action:hover {
+  color: #16c8f3 !important;
+}
+
+/* Make cart slightly more like the reference */
+.kv-header__cart .kv-header__action-svg {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+.kv-header__cart-count {
+  position: absolute !important;
+  top: -10px !important;
+  right: -9px !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  padding: 0 5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #16c8f3 !important;
+  color: #000000 !important;
+  border-radius: 999px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
 }
