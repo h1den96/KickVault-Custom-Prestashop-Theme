@@ -81,6 +81,57 @@
           {* FEATURED DROPS - using ps_newproducts for now *}
           {hook h='displayHome' mod='ps_newproducts'}
 
+          {* REASSURANCE BANNER *}
+          <section class="kv-reassurance">
+            <div class="kv-reassurance__item">
+              <div class="kv-reassurance__icon" aria-hidden="true">
+                 <img src="{$urls.theme_assets}img/authentic.svg" alt="authentic">
+              </div>
+              <div class="kv-reassurance__content">
+                <h3>100% AUTHENTIC</h3>
+                <p>Every pair is verified legit.</p>
+              </div>
+            </div>
+
+            <div class="kv-reassurance__item">
+              <div class="kv-reassurance__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21L32 10L52 21V43L32 54L12 43V21Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M12 21L32 32L52 21" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M32 32V54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M22 16L42 27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="kv-reassurance__content">
+                <h3>FAST SHIPPING</h3>
+                <p>Quick delivery, right to you.</p>
+              </div>
+            </div>
+
+            <div class="kv-reassurance__item">
+              <div class="kv-reassurance__icon" aria-hidden="true">
+                 <img src="{$urls.theme_assets}img/limited.svg" alt="limited">
+              </div>
+              <div class="kv-reassurance__content">
+                <h3>LIMITED DROPS</h3>
+                <p>Exclusive styles. Limited stock.</p>
+              </div>
+            </div>
+
+            <div class="kv-reassurance__item">
+              <div class="kv-reassurance__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 8L52 16V30C52 43 43 53 32 57C21 53 12 43 12 30V16L32 8Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M23 32L29 38L42 25" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="kv-reassurance__content">
+                <h3>EASY RETURNS</h3>
+                <p>14-day hassle-free returns.</p>
+              </div>
+            </div>
+          </section>
+
           {* Temporarily disabled until we style the rest of the homepage *}
           {* {hook h='displayHome' mod='ps_featuredproducts'} *}
           {* {hook h='displayHome' mod='ps_banner'} *}
