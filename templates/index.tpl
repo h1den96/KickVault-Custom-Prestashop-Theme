@@ -26,8 +26,8 @@
           {* CATEGORY TRIO BANNERS *}
           <section class="kv-category-banners">
             <div class="kv-category-banners__grid">
-
-              <a class="kv-category-card" href="/lifestyle">
+                  
+              <a class="kv-category-card" href="{$urls.base_url}10-lifestyle">
                 <img
                   src="{$urls.theme_assets}img/lifestyle-banner.png"
                   alt="Lifestyle sneakers"
@@ -42,8 +42,8 @@
                 </div>
                 <span class="kv-category-card__plus">+</span>
               </a>
-
-              <a class="kv-category-card" href="/running">
+                  
+              <a class="kv-category-card" href="{$urls.base_url}11-running">
                 <img
                   src="{$urls.theme_assets}img/running-banner.png"
                   alt="Running sneakers"
@@ -58,8 +58,8 @@
                 </div>
                 <span class="kv-category-card__plus">+</span>
               </a>
-
-              <a class="kv-category-card" href="/training">
+                  
+              <a class="kv-category-card" href="{$urls.base_url}12-training">
                 <img
                   src="{$urls.theme_assets}img/training-banner.png"
                   alt="Training sneakers"
@@ -74,7 +74,7 @@
                 </div>
                 <span class="kv-category-card__plus">+</span>
               </a>
-
+                  
             </div>
           </section>
 
